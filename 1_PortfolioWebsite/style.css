@@ -148,3 +148,132 @@ display: none;
 }
 
 /* SECTION STYLES */
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section {
+    display:flex;
+}
+
+/* PROFILE SECTION STYLES */
+#profile {
+    display: flex;
+    flex-wrap: wrap;       /* allows content to stack on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;             /* space between image and text */
+    height: auto;          /* auto height to adjust for wrapping */
+    padding: 2rem 1rem;    /* padding for some breathing room */
+}
+
+.section_pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;         /* smaller for mobile */
+    width: 300px;
+}
+
+.section_pic-container img {
+    border-radius: 50%;    /* makes it a circle */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* ensures image doesn't stretch */
+}
+
+.section_text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers everything horizontally */
+    text-align: center;
+}
+
+.section_text_p1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.section_text_p2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: rgb(85, 85, 85);
+}
+
+/* BUTTONS */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-color-1 {
+    background-color: #333;
+    color: white;
+}
+
+.btn-color-2 {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/*ICONS */
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.icon {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* subtle hover effect */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section_pic-container {
+        height: 250px;
+        width: 250px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
