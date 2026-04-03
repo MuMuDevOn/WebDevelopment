@@ -1,76 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <!-- Desktop Navigation -->
-    <nav id="desktop-nav">
-        <div class="logo">Mutsa</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Desktop Navigation -->
+  <nav id="desktop-nav">
+    <div class="logo">Mutsa</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hamburger Navigation -->
-    <nav id="hamburger-nav">
-        <div class="logo">Mutsa</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <ul>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Hamburger Navigation -->
+  <nav id="hamburger-nav">
+    <div class="logo">Mutsa</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Profile Section -->
-    <section id="profile">
-        <div class="section_pic-container">
-            <img src="./assets/Mutsa_ProfilePic1.png" alt="Mutsa profile picture">
-        </div>
-        <div class="section_text-container">
-            <p class="section_text_p1">Hello, I'm</p>
-            <h1 class="title">Mutsa A.T Kembo</h1>
-            <p class="section_text_p2">Embedded Systems and Network Engineer</p>
-            
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="location.href='./assets/Mutsa_ATS_Required_CV.pdf'">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
-            </div>
+  <!-- Profile Section -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/Mutsa_ProfilePic1.png" alt="Mutsa profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Mutsa A.T Kembo</h1>
+      <p class="section__text__p2">Embedded Systems and Network Engineer</p>
 
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" 
-                     alt="My Linkedin profile"
-                     class="icon" 
-                     onclick="location.href='https://www.linkedin.com/in/mutsa-kembo-883699330/'"
-                />
-                <img src="./assets/github.png" 
-                     alt="My Github profile"
-                     class="icon" 
-                     onclick="location.href='https://github.com/MuMuDevOn/'"
-                />
-            </div>
-        </div>
-    </section>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Mutsa_ATS_Required_CV.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+      </div>
 
-    <script src="script.js"></script>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/mutsa-kembo-883699330/'" />
+        <img src="./assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/MuMuDevOn/'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header">
+      <p class="section__text__p1">Get To Know Me</p>
+      <h1 class="title">About Me</h1>
+    </div>
+
+    <div class="about-section-container">
+      <!-- About Picture -->
+      <div class="about-pic-container">
+        <img src="./assets/mutsa_about-pic.jpeg" alt="Profile picture" class="about-pic" />
+      </div>
+
+      <!-- About Details -->
+      <div class="about-details-container">
+        <!-- Cards -->
+        <div class="about-cards">
+          <div class="details-card">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Embedded Systems & Network Engineer</p>
+          </div>
+          <div class="details-card">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Currently pursuing a BSc in Computer Science <br />Final Year Student</p>
+          </div>
+        </div>
+
+        <!-- About Text -->
+        <div class="about-text">
+          <p>
+            I am a dedicated and passionate Embedded Systems and Network Engineer 
+            with a strong background in designing, developing, and maintaining 
+            embedded systems and network infrastructures. I enjoy solving complex 
+            problems and constantly learning new technologies to enhance my skills.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow -->
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'" />
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+
+    <div class="experience-details-container">
+      <div class="about-container">
+        <!-- Embedded Systems Card -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Embedded System Engineer</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C++</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Arduino</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Raspberry Pi</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GPIO & Sensors</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Linux (Raspberry Pi OS / Embedded Linux)</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git & GitHub</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Arduino IDE / VS Code</h3><p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Network Engineer Card -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Network Engineer</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Cisco Packet Tracer</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>VLAN Configuration</h3><p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Routing & Switching</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TCP/IP Fundamentals</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DHCP & IP Addressing</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Network Troubleshooting</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Subnetting</h3><p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Wi-Fi / Wireless LAN Controllers</h3><p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow -->
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'" />
+  </section>
+
+  <section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="projects-container">
+    
+    <!-- LED Blinking Project -->
+    <div class="project-card">
+      <img
+        src="./assets/led_blink.gif"
+        alt="LED Blinking Project Demo"
+        class="project-img"
+      />
+      <h2 class="project-title">LED Blinking Project</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/MuMuDevOn/Arduino_Portfolio/tree/main/Arduino_BeginnerProjects/Project1-LED_Blink_Project')"
+        >
+          GitHub
+        </button>
+      </div>
+    </div>
+
+    <!-- Traffic Light LED Project -->
+    <div class="project-card">
+      <img
+        src="./assets/Traffic_light.gif"
+        alt="Traffic Light LED Project Demo"
+        class="project-img"
+      />
+      <h2 class="project-title">Traffic Light LED Project</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/MuMuDevOn/Arduino_Portfolio/tree/main/Arduino_BeginnerProjects/Project2_Traffic_Light_LED_BLINK')"
+        >
+          GitHub
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <section id="contact">
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+
+  <div class="contact-info-upper-container">
+    <!-- Email -->
+    <div class="contact-info-container">
+      <img
+        src="./assets/email.png"
+        alt="Email icon"
+        class="icon contact-icon email-icon"
+      />
+      <p>
+        <a href="mailto:matsworkbasedbrand@gmail.com">matsworkbasedbrand@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="contact-info-container">
+      <img
+        src="./assets/linkedin.png"
+        alt="LinkedIn icon"
+        class="icon contact-icon"
+      />
+      <p>
+        <a href="https://www.linkedin.com/in/mutsa-kembo-883699330/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <nav>
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <p>Copyright &#169; Mutsa A.T Kembo. All Rights Reserved.</p>
+</footer>
+  <script src="script.js"></script>
 </body>
 </html>
