@@ -18,7 +18,7 @@
 <nav id = "nav_bar">
     <div class = "logo"> Mumza University </div>
          <ul class = "nav_links">
-        <li><a href = "info.html">Info Page</a></li>
+        <li><a href = "#info_page">Info Page</a></li>
         <li><a href = "registration.html">Registration Form Page</a></li>
         <li><a href = "thankyou.html">Thank You Page</a></li>
         </ul>
@@ -31,17 +31,24 @@
     </div>
      <div>
         <ul class = "book_links">
-            <li><a href = "info.html" onclick = "toggleMenu()">Info Page</a></li>
+            <li><a href = "#info_page" onclick = "toggleMenu()">Info Page</a></li>
             <li><a href = "registration.html" onclick = "toggleMenu()">Registration Form Page</a></li>
             <li><a href = "thankyou.html" onclick = "toggleMenu()">Thank You Page</a></li>
             </ul>
     </div>    
 </nav>
 
-<section id = "front_page">
-<div class = "front_page_pic">
+<section id = "info_page">
+<div class = "info_page_pic">
 <img src = "./assets/University_Image.jpg" alt = "Front page picture of students">
-
+<div class = "info_page_text">
+    <h1 class = "info_page_text_h1"> Welcome to Mumza University </h1>
+    <p class = "info_page_text_p1"> Join us in the shaping of the future scholars in Africa</p>
+    <p class = "info_page_text_p2"> Apply now to be a part of the Mumza University family</p>
+   <div class="btn-container">
+        <button class="btn btn-color-1" onclick="location.href='registration.html'">Apply here</button>
+      </div> 
+</div>
 
 </div>
 
