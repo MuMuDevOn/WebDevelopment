@@ -7,67 +7,144 @@
 }
 
 /* NAVBAR */
-#nav_bar {
+.navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 20px 50px;
   background: #002147;
   color: white;
-  padding: 15px 30px;
 }
 
-.nav_links {
+.nav-links {
   display: flex;
-  list-style: none;
   gap: 20px;
+  list-style: none;
 }
 
-.nav_links a {
+.nav-links a {
   color: white;
-  text-decoration: none;
-}
-
-/* MENU ICON */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-/* MOBILE MENU */
-.mobile_menu {
-  display: none;
-  flex-direction: column;
-  background: #002147;
-}
-
-.mobile_menu a {
-  color: white;
-  padding: 10px;
   text-decoration: none;
 }
 
 /* HERO */
-#info_page {
-  text-align: center;
-  padding: 50px;
+.hero {
+  height: 100vh;
+  background: url('./assets/University_Image.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-#info_page img {
-  width: 60%;
+/* OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* TEXT */
+.hero-text {
+  position: relative;
+  color: white;
+  text-align: center;
+
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.hero-text p {
   margin: 20px 0;
-  border-radius: 10px;
 }
 
 /* BUTTON */
 button {
-  padding: 12px 20px;
+  padding: 12px 25px;
   border: none;
-  background: #002147;
+  background: #00bfff;
   color: white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #004080;
+  transform: scale(1.05);
+}
+
+/* FORM PAGE */
+#reg_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #002147, #004080);
+}
+
+.reg_form {
+  background: white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 10px;
+
+  border: 3px solid #00bfff;
+  animation: slideUp 1s ease;
+}
+
+.reg_form input,
+.reg_form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.reg_form button {
+  width: 100%;
+}
+
+/* THANK YOU */
+#thank_you_page {
+  height: 100vh;
+  background: url('./assets/ThankYou_Image2.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#thank_you_page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.thank_you_content {
+  position: relative;
+  color: white;
+  text-align: center;
+
+  animation: fadeIn 2s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

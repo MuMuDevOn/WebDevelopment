@@ -1,9 +1,20 @@
 @media (max-width: 768px) {
-  .nav_links {
-    display: none;
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .menu-icon {
-    display: block;
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .reg_form {
+    width: 90%;
   }
 }
