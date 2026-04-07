@@ -1,1 +1,9 @@
-/*This is a simple Css file used to create the responsive design for the website */
+@media (max-width: 768px) {
+  .nav_links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

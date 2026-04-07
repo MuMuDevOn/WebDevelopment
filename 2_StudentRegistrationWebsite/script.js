@@ -1,9 +1,15 @@
+// TOGGLE MOBILE MENU
 function toggleMenu() {
-  const menu = document.querySelector(".book_links");
+  const menu = document.querySelector(".mobile_menu");
 
-  if (menu.style.display === "block") {
+  if (menu.style.display === "flex") {
     menu.style.display = "none";
   } else {
-    menu.style.display = "block";
+    menu.style.display = "flex";
   }
+}
+
+// BUTTON NAVIGATION
+function goToApply() {
+  window.location.href = "registration.html";
 }
