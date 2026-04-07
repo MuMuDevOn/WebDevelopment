@@ -1,1 +1,20 @@
 /*This is a simple Css file used to style the website */
+
+
+.info_page_text_h1{ 
+text-align: center;
+font-weight: bold; 
+
+
+
+
+}
+
+.info_page_pic{
+size: 100px;
+height: 100px;
+width: auto;
+
+
+
+}
